@@ -1,0 +1,42 @@
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateZ(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateZ(15deg);
+  }
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translate(0, 0) rotateZ(15deg);
+  }
+  25% {
+    transform: translate(10px, -10px) rotateZ(15deg);
+  }
+  50% {
+    transform: translate(0, -20px) rotateZ(15deg);
+  }
+  75% {
+    transform: translate(-10px, -10px) rotateZ(15deg);
+  }
+}
+
+.logo-container {
+  position: absolute;
+  top: 10%;
+  left: 625%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeSlideUp 3s ease forwards, floatAround 10s ease-in-out 3s infinite;
+  z-index: 0;
+
+  .solid-logo {
+    width: 100%;
+    display: block;
+  }
+}
