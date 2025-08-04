@@ -6,7 +6,13 @@ body {
   margin: 0;
   font: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
   color: #444;
-  background: #022c43;
+  background: 
+    radial-gradient(80% 80% at 30% 100%, #2a4fff 0%, transparent 70%),
+    radial-gradient(80% 80% at 70% 100%, #2a4fff 0%, transparent 70%),
+    #161616;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   overflow: hidden;
   display: block;
   -webkit-font-smoothing: antialiased;

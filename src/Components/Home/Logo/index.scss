@@ -27,13 +27,14 @@
 .logo-container {
   position: absolute;
   top: 10%;
-  left: 625%;
+  left: 40%;
   width: 900px;
   height: 900px;
   transform: translate(-50%, -50%);
   opacity: 0;
   animation: fadeSlideUp 3s ease forwards, floatAround 10s ease-in-out 3s infinite;
   z-index: 0;
+ 
 
   .solid-logo {
     width: 100%;

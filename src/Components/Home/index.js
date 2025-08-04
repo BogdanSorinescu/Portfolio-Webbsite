@@ -5,19 +5,25 @@ import AnimatedLetters from '../AnimatedLetters';
 import React, { useEffect, useState } from 'react';
 import Logo from './Logo';
 
+
+
 const Home = ()=>{
     const [letterClass, setLetterClass] = useState('text-animate');
     const nameArray = ['o', 'g', 'd', 'a', 'n']
     const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r','e', ' ', 'D', 'e','v', 'e','l','o','p','e','r']
+    const [loading, setLoading]= useState(true);
 
     useEffect(() => {
-    const timer = setTimeout(() => {
-        setLetterClass('text-animate-hover');
-    }, 4000);
+    const timer = setTimeout(() => setLetterClass('text-animate-hover'), 4000);
 
-    return () => clearTimeout(timer);
+    const timer2 = setTimeout(() => setLoading(false), 2000);
+
+    return () => {clearTimeout(timer); clearTimeout(timer2)};
 }, []);
 
+    if (loading){
+        return <div className='loader'></div>
+    }
 
     return (
         <div className="container home-page">
@@ -36,7 +42,10 @@ const Home = ()=>{
                 </h1>
 
                 <h2>Software Developer / Software Technology student </h2>
+
                 <br></br>
+
+                
                 <Link to = "/contact" className='flat-button'>CONTACT ME</Link>
             </div>
 

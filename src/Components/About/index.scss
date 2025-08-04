@@ -1,16 +1,13 @@
 .stage-cube-cont {
-    width: 400px;
-    height: 400px;
+
     position: absolute;
     top: 50%;
-    left: 780px;
+    left: 1200px;
     transform: translate(-50%, -50%);
     perspective: 1000px;
-    overflow: hidden;
+    overflow: visible;
 
-    div {
-        
-    }
+
 }
 
 .cubespinner {
@@ -23,10 +20,54 @@
     animation-duration: 12s;
     transform-style: preserve-3d;
     transform-origin: 100px 100px;
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.4);
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0px lightyellow;
+
+    }
+
+    .face1 {
+        transform: translateZ(100px);
+    }
+
+    .face2 {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+
+    .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .face6 {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .face7 {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
 }
 
 @keyframes spincube {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
 
@@ -49,4 +90,32 @@
     83% {
         transform: rotateX(90deg);
     }
+}
+
+.loader {
+  height: 100px;
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: fixed; // fullscreen center
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mask: conic-gradient(#000 0 0) content-box exclude,
+        conic-gradient(#000 0 0);
+  filter: blur(12px);
+  z-index: 9999;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(#0000 0 5%, #ffd700, #0000 20% 50%);
+  animation: l2 1.5s linear infinite;
+}
+@keyframes l2 {
+  to {
+    rotate: 1turn;
+  }
 }
