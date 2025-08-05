@@ -14,6 +14,12 @@
     &:hover {
         animation: rubberBand 1s;
         color: #ffd700;
+        text-shadow: 
+            0 0 5px #ffd700,
+            0 0 10px #ffd700,
+            0 0 20px #ffd700,
+            0 0 30px #ffd700;
+        
     }
 
 }
