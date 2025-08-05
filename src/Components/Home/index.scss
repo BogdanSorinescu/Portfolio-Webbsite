@@ -115,13 +115,14 @@
     }
 }
 
+
 .loader {
   height: 100px;
   aspect-ratio: 1;
   padding: 10px;
   border-radius: 50%;
   box-sizing: border-box;
-  position: fixed; // fullscreen center
+  position: fixed; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -131,6 +132,7 @@
   z-index: 9999;
 }
 .loader:before {
+  background-color: #000;
   content: "";
   position: absolute;
   inset: 0;

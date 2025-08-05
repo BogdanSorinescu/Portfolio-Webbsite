@@ -7,9 +7,10 @@ body {
   font: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
   color: #444;
   background: 
-    radial-gradient(80% 80% at 30% 100%, #2a4fff 0%, transparent 70%),
-    radial-gradient(80% 80% at 70% 100%, #2a4fff 0%, transparent 70%),
+    /* radial-gradient(80% 80% at 30% 100%, #2a4fff 0%, transparent 70%),
+    radial-gradient(80% 80% at 70% 100%, #2a4fff 0%, transparent 70%), */
     #161616;
+    position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -17,4 +18,33 @@ body {
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: 
+      radial-gradient(80% 80% at 30% 100%, #2a4fff 0%, transparent 70%),
+      radial-gradient(80% 80% at 70% 100%, #2a4fff 0%, transparent 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0;
+    filter: blur(12px);
+    animation: glowIn 5s forwards ease-in-out;
+    z-index: -1;
+  }
+}
+
+
+
+@keyframes glowIn{
+  from{
+    opacity: 0;
+    filter:blur(13px);
+  }
+  to{
+    opacity: 1;
+    filter: blur(6px);
+  }
 }

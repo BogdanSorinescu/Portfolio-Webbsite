@@ -16,7 +16,7 @@ const Home = ()=>{
     useEffect(() => {
     const timer = setTimeout(() => setLetterClass('text-animate-hover'), 4000);
 
-    const timer2 = setTimeout(() => setLoading(false), 2000);
+    const timer2 = setTimeout(() => setLoading(false), 500);
 
     return () => {clearTimeout(timer); clearTimeout(timer2)};
 }, []);
