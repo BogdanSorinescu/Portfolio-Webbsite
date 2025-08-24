@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import "./index.scss";
 import Loader from "react-loaders";
 
+
 const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -40,13 +41,15 @@ const Projects = () => {
 
       <div className="projects-container">
         <div className="slide-cards">
-          <h2>Porjects</h2>
+          <img src="/images/PortfolioImage.png" alt="Portfolio" />
+          <h2>Portfolio Website</h2>
           <p>Responsive Portfolio website made with JavaScript, React and SCSS.</p>
         </div>
 
         <div className="slide-cards">
+          <img src="/images/KioskImage.png" alt="Portfolio" />
           <h2>Self service kiosk</h2>
-          <p>Univeersity project made with PostgreSQL backend, Java for functionality and JavaFX.</p>
+          <p>University project made with PostgreSQL backend, Java for functionality and JavaFX.</p>
         </div>
       </div>
     </div>
