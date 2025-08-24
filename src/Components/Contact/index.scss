@@ -104,13 +104,13 @@
          animation: pulseglow 2s infinite ease-in-out;
 
          &:hover {
-               background: #ffd700;
-               color: #333;
-               box-shadow: #ffd700;
-               animation-play-state: paused;
+             background: #ffd700;
+             color: #333;
+             box-shadow: #ffd700;
+             animation-play-state: paused;
 
 
-        }
+         }
 
          .svg-wrapper-1 {
              display: flex;
@@ -157,35 +157,6 @@
              transform: translateY(-0.1em);
          }
      }
-
-
-     //  .flat-button {
-     //      color: #ffd770;
-     //      background: transparent;
-     //      font-size: 11px;
-     //      letter-spacing: 3px;
-     //      text-decoration: none;
-     //      padding: 8px 10px;
-     //      border: 1px solid #ffd700;
-     //      border-radius: 10px;
-     //      font-family: sans-serif;
-     //      cursor: pointer;
-     //      display: block;
-     //      margin-left: 580px;
-
-
-     //      animation: pulseglow 2s infinite ease-in-out;
-
-     //      &:hover {
-     //          background: #ffd700;
-     //          color: #333;
-     //          box-shadow: #ffd700;
-     //          animation-play-state: paused;
-
-
-     //      }
-
-     //  }
 
  }
 
