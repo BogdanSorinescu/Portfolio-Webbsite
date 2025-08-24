@@ -5,12 +5,16 @@
     .page-title{
         font-size: 3rem;
         margin-bottom: 3rem;
-        color: #ffffff;
+        color: #ffd700;
         font-family: "Coolvetica";
         font-weight: 400;
         text-shadow: #000;
         font-size: 60px;
+
+      
     }
+
+
 
     .projects-container{
         display: flex;
@@ -19,9 +23,13 @@
         align-items: center;
 
         .slide-cards{
-            width:80%;
+            color: #ffffff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            width:100%;
             max-width: 700px;
-            background: #1e1e1e;
+            background: #5251511e;
             border-radius: 20px;
             padding: 2rem;
             text-align: left;
@@ -33,14 +41,18 @@
 
             opacity: 0;
             transform: translateY(50px);
-            animation: slideUp 0.8s ease forwards;
+            animation: slideUp 2s ease forwards;
+            
+        
 
             img{
-                width: 150px;
-                height: 150px;
+                width: 200px;
+                height: 200px;
                 object-fit: cover;
                 border-radius: 15px;
             }
+
+           
 
             .card-content{
                 flex:1;
@@ -61,4 +73,19 @@
             transform:translateY(0);
         }
     }
+}
+
+
+.click-instruction{
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700;
+
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 2.5s forwards;
+    
 }
