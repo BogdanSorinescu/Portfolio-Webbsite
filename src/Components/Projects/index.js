@@ -50,11 +50,13 @@ const Projects = () => {
           </div>
         </a>
 
+        <a href="https://github.com/BogdanSorinescu/Kiosk-Project" target="_blank" rel="noopener noreferrer" className="project-link">
         <div className="slide-cards">
           <img src={kioskImage} alt="Kiosk" />
           <h2>Self service kiosk</h2>
           <p>University project made with PostgreSQL backend, Java for functionality and JavaFX.</p>
         </div>
+        </a>
       </div>
     </div>
   )
