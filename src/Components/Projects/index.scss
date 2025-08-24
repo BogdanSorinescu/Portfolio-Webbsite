@@ -1,1 +1,49 @@
+.projects{
+    padding: 4rem 2rem;
+    text-align: center;
 
+    .page-title{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: #ffffff;
+        font-family: "Coolvetica";
+        font-weight: 400;
+        text-shadow: #000;
+        font-size: 60px;
+    }
+
+    .projects-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .slide-cards{
+            width:80%;
+            max-width: 700px;
+            background: #1e1e1e;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: left;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 0.8s ease forwards;
+
+            .slide-cards:nth-child(1){
+                animation-delay: 0.2s;
+            }
+            .slide-cards:nth-child(2){
+                animation-delay: 0.5s;
+            }
+        }
+    }
+
+    @keyframes slideUp{
+        to{
+            opacity: 1;
+            transform:translateY(0);
+        }
+    }
+}
