@@ -1,3 +1,4 @@
+
 .stage-cube-cont {
 
     position: absolute;
@@ -118,4 +119,52 @@
   to {
     rotate: 1turn;
   }
+}
+
+.skills {
+  margin-top: 10px;
+  width: 90%;
+  margin-left: 30px;
+
+  .skill {
+    margin-bottom: 20px;
+    position: relative;
+
+    .skill-name {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #fff; // skill title color
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      
+      border-radius: 10px;
+      z-index: 0;
+    }
+
+    .progress-bar {
+      height: 18px;
+      width: 0; // initial
+      background: linear-gradient(90deg, #facc15, #fbbf24);
+      border-radius: 10px;
+      transition: width 1.5s ease-in-out;
+      position: relative;
+      z-index: 1; // on top of track
+    }
+  }
+
+  // Optional: individual colors
+  .skill:nth-child(1) .progress-bar { background: linear-gradient(90deg, #3776ab, #306998); }
+  .skill:nth-child(2) .progress-bar { background: linear-gradient(90deg, #f89820, #ed8b00); }
+  .skill:nth-child(3) .progress-bar { background: linear-gradient(90deg, #336791, #2d5a87); }
+  .skill:nth-child(4) .progress-bar { background: linear-gradient(90deg, #1572b6, #33a9dc); }
+  .skill:nth-child(5) .progress-bar { background: linear-gradient(90deg, #f7df1e, #f0db4f); }
+  .skill:nth-child(6) .progress-bar { background: linear-gradient(90deg, #239120, #68217a); }
 }

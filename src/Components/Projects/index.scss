@@ -1,8 +1,33 @@
-.projects{
+.skills {
+  margin-top: 30px;
+  width: 90%;
+
+  .skill {
+    margin-bottom: 20px;
+
+    .skill-name {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .progress-bar {
+      height: 18px;
+      width: 0;
+      background: linear-gradient(90deg, #facc15, #fbbf24);
+      border-radius: 10px;
+      transition: width 1.5s ease-in-out;
+    }
+  }
+}
+
+
+.projects {
     padding: 4rem 2rem;
     text-align: center;
 
-    .page-title{
+    .page-title {
         font-size: 3rem;
         margin-bottom: 3rem;
         color: #ffd700;
@@ -11,30 +36,30 @@
         text-shadow: #000;
         font-size: 60px;
 
-      
+
     }
 
 
 
-    .projects-container{
+    .projects-container {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         align-items: center;
 
-        .slide-cards{
+        .slide-cards {
             color: #ffffff;
             font-size: 15px;
             text-decoration: none;
             letter-spacing: 1px;
             font-family: sans-serif;
-            width:100%;
+            width: 100%;
             max-width: 700px;
             background: #5251511e;
             border-radius: 20px;
             padding: 2rem;
             text-align: left;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
             display: flex;
             gap: 1.5rem;
             align-items: center;
@@ -43,41 +68,42 @@
             opacity: 0;
             transform: translateY(50px);
             animation: slideUp 2s ease forwards;
-            
-        
 
-            img{
+
+
+            img {
                 width: 200px;
                 height: 200px;
                 object-fit: cover;
                 border-radius: 15px;
             }
 
-           
 
-            .card-content{
-                flex:1;
+
+            .card-content {
+                flex: 1;
             }
 
-            .slide-cards:nth-child(1){
+            .slide-cards:nth-child(1) {
                 animation-delay: 0.2s;
             }
-            .slide-cards:nth-child(2){
+
+            .slide-cards:nth-child(2) {
                 animation-delay: 0.5s;
             }
         }
     }
 
-    @keyframes slideUp{
-        to{
+    @keyframes slideUp {
+        to {
             opacity: 1;
-            transform:translateY(0);
+            transform: translateY(0);
         }
     }
 }
 
 
-.click-instruction{
+.click-instruction {
     text-align: center;
     font-size: 21px;
     letter-spacing: 1px;
@@ -88,5 +114,7 @@
 
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out 2.5s forwards;
-    
+
 }
+
+
